@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validator</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <!--  -->
+  <body>
+    <div class="container">
+      <form action="GET" id="form">
+        <h2>Register With Us</h2>
+        <!--Don't need an action coz not actually submitting to a file!  -->
+        <div class="form-control">
+          <label for="username"> Username</label>
+          <input type="text" id="username" placeholder="Enter username" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="email"> Email</label>
+          <input type="text" id="email" placeholder="Enter email" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="password"> Password</label>
+          <input type="password" id="password" placeholder="Enter password" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="password2"> Re-enter Password</label>
+          <input
+            type="password"
+            id="password2"
+            placeholder="Re-enter password"
+          />
+          <small>Error message</small>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- Lessons Learned
+  1. On '<form>' tags, you DON'T need an 'action' coz you're not actually submitting to a file! 
+  2. IMPORTANT: Pair 'ID' and 'Class' on same <tag> & give same name coz: 
+       (1) Grab 'ID' to use in JAVASCRIPT,   
+       (2) Grab 'Class' to use in CSS.
+  3. class='form-control' - Put each sub-seperate section of a form inside its own <div> with this class name, (i.e. the <label>, <input> & <small> for each part):
+        a) Put the <label> ABOVE the <input>.
+        b) If want error to display below that SPECIFIC input (instead of top of form), add <small> tag below the <input>.
+        c) label only needs a 'for', the input needs a unique 'id' and 'placeholder'.
+  4. <button> - Use this tag ONLY INSIDE <FORM>. If outside, use <a>. 
+-->

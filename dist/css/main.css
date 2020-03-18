@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px; }
+
+body {
+  background: #999;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; }
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center; }
+
+.container {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 400px; }
+  .container form {
+    padding: 30px 40px; }
+    .container form .form-control {
+      margin-bottom: 10px;
+      padding-bottom: 20px;
+      position: relative; }
+      .container form .form-control label {
+        color: #666;
+        display: block;
+        margin-bottom: 5px; }
+      .container form .form-control input {
+        border: 2px solid #f0f0f0;
+        border-radius: 4px;
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 14px; }
+        .container form .form-control input:focus {
+          outline: 0;
+          border-color: #777; }
+      .container form .form-control.success input {
+        border-color: #2ecc71; }
+      .container form .form-control.error input {
+        border-color: #e74c3c; }
+      .container form .form-control small {
+        color: #e74c3c;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        visibility: hidden; }
+      .container form .form-control.error small {
+        visibility: visible; }
+    .container form button {
+      cursor: pointer;
+      background: #3498db;
+      border: 2px solid #3498db;
+      border-radius: 5px;
+      color: white;
+      display: block;
+      font-size: 16px;
+      padding: 10px;
+      margin-top: 20px;
+      width: 100%; }
+
+/* Lessons Learned:
+1. Google Fonts - you can select the '@import' option on the google fonts website to get the embed for CSS INSTEAD OF an embed for HTML!! 
+2. In <body>, set 'display:flex' - then you can apply horizontal and vertical-centering.
+    a. "justify-content: center;" - HORIZONTAL (x-axis) centralisation.
+    b. "align-items: center;"     - VERTICAL (y-axis) centralisation.
+                                    (REQUIRES 'HEIGHT' PROPERTY TO WORK!!!)
+      i) "min-height: 100vh;" - Required to make 'align-items' property work. 
+
+3. When creating a container, it MUST include:
+    a. width - IMPORTANT - set the width of the container instead of using margins and padding, so it can adapt/BE RESPONSIVE!!!!
+    b. box-shadow - OPTIONAL - can make the thing pop, and look less stale! 
+
+4. "padding-bottom: 20px;" - by doing this to the form item, it applies between each form item! 
+
+5. The only element that should have an explicitly defines, ABSOLUTE WIDTHS in px is the 'Container' element. Everything inside it should have RELATIVE WIDTHS in %:
+
+    >" width: 100% "- When you have boxes inside a 'container', set their width to '100%' - This way, the width fills 100% of available space inside container and can adapt to the container size changing from resizing.
+    
+6. You can create classes BUT NOT PUT THEM IN THE STATIC HTML. They can be added dynamically, using Javascript, into the HTML through logic:
+
+        &.success input {
+          border-color: #2ecc71;
+        }
+
+        &.error input {
+          border-color: #e74c3c;
+        }
+7. When you don't want content to show on the static site, use one of the following:
+    a. "visibility: hidden;" - When you just want the text hidden but keep space element takes up.
+    b. "display: none;"      - When want everything to collapse around it when hide text so not taking up space.
+    
+8. 'display:block' - Need to learn more about why he uses it coz doesn't seem necessary.
+    */
