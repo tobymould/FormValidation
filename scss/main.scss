@@ -1,7 +1,8 @@
+//---------------IMPORTS SECTION---------------//
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
 @import "variables";
 
+//---------------OVERALL CHANGES SECTION---------------//
 * {
   box-sizing: border-box;
   margin: 0px;
@@ -23,6 +24,7 @@ h2 {
   text-align: center;
 }
 
+//---------------CONTAINER-SPECIFIC SECTION---------------//
 .container {
   background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); //adds a nice shadow around it to stand out more.
